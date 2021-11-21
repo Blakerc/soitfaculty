@@ -41,7 +41,10 @@
 				<!-- updateButton -->
 				<td>
 				<a th:href="@{/Faculties/viewUpdateForm(facultyId=${theFaculty.id})}"
-				class="btn btn-danger btn-sm">update</a>
+				class="btn btn-light btn-sm">Update</a>
+				
+				<a th:href="@{/Faculties/delete(facultyId=${theFaculty.id})}"
+				class="btn btn-danger btn-sm" onclick="if(!(confirm('Please confirm that you want to delete this faculty')))return false">Delete</a>
 		</tbody>
 	</table>
 </div>

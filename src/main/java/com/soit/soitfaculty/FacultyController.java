@@ -98,7 +98,16 @@ public class FacultyController {
 		
 	}
 	
-	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("facultyId") int theId) {
+		
+		//Remove Faculty
+		facultyService.deleteById(theId);
+		
+		//return to faculty directory
+		return "redirect:/Faculties/List";
+		
+	}
 	
 	
 }
